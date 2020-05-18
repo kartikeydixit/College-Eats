@@ -3,8 +3,19 @@
 <head>
 <title>Feedback form</title>
 <link rel="stylesheet" type="text/css" href="table_style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
+<body 
+style="
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./images/fruit.jpg'); font-family: 'Montserrat', sans-serif;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+    height:100vh;
+    color: white;
+    
+"
+>
 <?php
 $server_NAME="localhost";
 $admin_NAME="admin";
@@ -17,9 +28,9 @@ if(!$connect){
     $feedback="SELECT * FROM feedback_table 
     WHERE canteen='bika'";
     $result=mysqli_query($connect,$feedback);
-    echo "<table class='table'><thead><th>User Name</th><th>Item</th><th>Feedback</th></thead><tr>";
+    echo "<table class='table'><thead><th>Registration Number</th><th>Item</th><th>Feedback</th></thead><tr>";
     while($row=mysqli_fetch_assoc($result)){
-        echo "<td>".$row['name']."</td><td>".$row['item']."</td><td>".$row['feedback'];
+        echo "<td>".$row['Reg_no']."</td><td>".$row['item']."</td><td>".$row['feedback'];
         echo "</td></tr><tr>";
     }
     echo "</table>";
