@@ -3,7 +3,7 @@
 - The project is under development
 - The Website is now fully functional but not hosted.
 - Made by.......
--Md Basher
--Kartikey Dixit
+- Md Basher
+- Kartikey Dixit
 
          
